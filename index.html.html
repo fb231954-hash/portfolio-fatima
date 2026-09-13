@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fatima Bibi | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f8fc;--white:#fff;--text:#182033;--muted:#687087;--p:#635bff;--pd:#4b43d8;--light:#e9e7ff;--border:#e8eaf1;--dark:#121827}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,90%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#fffffff2;backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 25px "Playfair Display",serif}.logo span{color:var(--p)}
+.links{display:flex;gap:24px;list-style:none;font-size:14px;font-weight:700;color:#515a70}.links a:hover{color:var(--p)}
+.navbtn{background:var(--dark);color:#fff!important;padding:10px 17px;border-radius:10px}
+.hero{padding:105px 0 95px;background:radial-gradient(circle at 90% 15%,#635bff22,transparent 27%),#fff}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+.badge{display:inline-flex;gap:8px;padding:8px 13px;background:var(--light);color:var(--pd);border-radius:30px;font-size:13px;font-weight:700;margin-bottom:22px}
+.dot{width:7px;height:7px;background:var(--p);border-radius:50%}
+h1{font:700 clamp(46px,6vw,76px)/1.05 "Playfair Display",serif;letter-spacing:-2px;margin-bottom:22px}h1 span{color:var(--p)}
+.hero p{max-width:650px;color:var(--muted);font-size:18px;margin-bottom:30px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:13px 21px;border-radius:11px;font-size:14px;font-weight:700}
+.primary{background:var(--p);color:#fff}.primary:hover{background:var(--pd)}.outline{border:1px solid var(--border);background:#fff}.outline:hover{border-color:var(--p);color:var(--p)}
+.profile-card{background:var(--dark);color:#fff;border-radius:28px;padding:34px;box-shadow:0 25px 60px #1218272e}
+.initials{width:92px;height:92px;display:grid;place-items:center;border-radius:22px;background:linear-gradient(135deg,#7b74ff,#4b43d8);font:34px "Playfair Display",serif;margin-bottom:25px}
+.profile-card h3{font-size:22px}.profile-card p{font-size:14px;color:#b9c0d1;margin:5px 0 25px}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini div{padding:14px;border:1px solid #ffffff18;border-radius:13px;background:#ffffff0a}.mini strong{display:block;font-size:18px}.mini small{color:#9ea7ba}
+section{padding:90px 0}.label{text-transform:uppercase;letter-spacing:2px;font-size:13px;color:var(--p);font-weight:800;margin-bottom:8px}
+h2{font:700 40px/1.15 "Playfair Display",serif}.head{margin-bottom:38px}.head p{color:var(--muted);max-width:650px;margin-top:10px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px}.box{background:#fff;border:1px solid var(--border);border-radius:22px;padding:30px;box-shadow:0 18px 50px #141b2d0d}.box h3{font-size:22px;margin-bottom:12px}.box p{color:var(--muted)}
+.facts{display:grid;gap:13px}.fact{padding:18px 20px;background:#fff;border:1px solid var(--border);border-radius:14px;display:flex;justify-content:space-between;gap:15px}.fact:first-child{color:var(--muted)}.fact b{text-align:right}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.skill{background:#fff;border:1px solid var(--border);border-radius:17px;padding:22px;transition:.2s}.skill:hover,.project:hover{transform:translateY(-5px);box-shadow:0 18px 50px #141b2d0d}.icon{width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:var(--light);color:var(--p);font-weight:800;margin-bottom:15px}.skill h3{font-size:17px}.skill p,.project p{color:var(--muted);font-size:13px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{background:#fff;border:1px solid var(--border);border-radius:22px;padding:28px;transition:.2s}.project-top{display:flex;justify-content:space-between;margin-bottom:20px}.num{color:var(--p);font-weight:800;font-size:13px}.project h3{font-size:21px;margin-bottom:8px}.tags{margin-top:18px}.tag{display:inline-block;padding:6px 10px;border-radius:20px;background:#f1f2f7;color:#555e72;font-size:11px;font-weight:700;margin:3px}
+.dark{background:var(--dark);color:#fff;max-width:none}.dark h2{color:#fff}.dark .head p{color:#aeb6c8}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{padding:27px;border:1px solid #ffffff17;border-radius:18px;background:#ffffff0a}.service h3{margin:12px 0 7px}.service p{color:#aeb6c8;font-size:14px}
+.education{display:grid;gap:17px}.edu{background:#fff;border:1px solid var(--border);border-radius:17px;padding:23px 27px;display:flex;justify-content:space-between;gap:20px}.edu p{color:var(--muted);font-size:14px}.year{color:var(--p);font-weight:800;white-space:nowrap}
+.contact-card{background:linear-gradient(135deg,#635bff,#4038b8);border-radius:30px;padding:55px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:45px;box-shadow:0 25px 60px #4b43d833}.contact-card h2{font-size:42px;margin-bottom:13px}.contact-card>div>p{color:#e1e0ff}.details{display:grid;gap:13px}.item{background:#ffffff1a;border:1px solid #ffffff26;padding:16px 18px;border-radius:13px}.item small{display:block;color:#d7d5ff}.item strong{font-size:15px}
+footer{text-align:center;padding:25px;color:#7c8497;font-size:13px}
+@media(max-width:900px){.hero-grid,.about,.contact-card{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:1fr}}
+@media(max-width:680px){.links{display:none}.hero{padding:70px 0}.skills,.projects{grid-template-columns:1fr}section{padding:65px 0}.contact-card{padding:32px 24px}.contact-card h2{font-size:34px}.edu{flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><a class="logo" href="#home">Fatima<span>.</span></a><ul class="links"><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#services">Services</a></li><li><a href="#education">Education</a></li><li><a class="navbtn" href="#contact">Contact</a></li></ul></div></header>
+
+<section class="hero" id="home"><div class="container hero-grid"><div>
+<div class="badge"><span class="dot"></span> Digital Skills & Creative Portfolio</div>
+<h1>Hi, I'm <span>Fatima Bibi.</span></h1>
+<p>FCS graduate and aspiring BSCS student with practical skills in Artificial Intelligence, Web Development, WordPress, Shopify, Graphic Design, Canva and social media content creation.</p>
+<div class="buttons"><a class="btn primary" href="#projects">Explore My Work</a><a class="btn outline" href="#contact">Let's Connect</a></div>
+</div><div class="profile-card"><div class="initials">FB</div><h3>AI • Web • Design</h3><p>Creative digital solutions with a focus on technology, design and online business.</p><div class="mini"><div><strong>FCS</strong><small>Completed</small></div><div><strong>BSCS</strong><small>Next Goal</small></div></div></div></div></section>
+
+<section id="about"><div class="container"><div class="head"><div class="label">About Me</div><h2>A curious learner with a digital mindset.</h2><p>Focused on building practical skills and turning ideas into useful digital projects.</p></div><div class="about"><div class="box"><h3>Professional Profile</h3><p>I am Fatima Bibi, an FCS graduate from Mashal Degree College, Wah Cantt. I plan to continue my education in BSCS. Alongside academics, I have developed practical skills through courses and hands-on projects in AI, web development, e-commerce, office management and graphic design.</p></div><div class="facts"><div class="fact"><span>Education</span><b>FCS — Completed</b></div><div class="fact"><span>College</span><b>Mashal Degree College, Wah Cantt</b></div><div class="fact"><span>Next Goal</span><b>BSCS</b></div><div class="fact"><span>Location</span><b>Taxila Cantt</b></div></div></div></div></section>
+
+<section id="skills"><div class="container"><div class="head"><div class="label">My Skills</div><h2>Tools & skills I work with.</h2></div><div class="skills">
+<div class="skill"><div class="icon">AI</div><h3>Artificial Intelligence</h3><p>AI chatbots, AI agents and practical AI solutions.</p></div>
+<div class="skill"><div class="icon">WD</div><h3>Web Development</h3><p>Modern responsive website structure and design.</p></div>
+<div class="skill"><div class="icon">WP</div><h3>WordPress</h3><p>Business websites and content-focused websites.</p></div>
+<div class="skill"><div class="icon">SH</div><h3>Shopify</h3><p>E-commerce store design and online business setup.</p></div>
+<div class="skill"><div class="icon">GD</div><h3>Graphic Design</h3><p>Creative digital graphics and promotional designs.</p></div>
+<div class="skill"><div class="icon">CV</div><h3>Canva Designing</h3><p>Posters, presentations, social posts and branding visuals.</p></div>
+<div class="skill"><div class="icon">SM</div><h3>Social Media Posts</h3><p>Clean and engaging content for social platforms.</p></div>
+<div class="skill"><div class="icon">OM</div><h3>Office Management</h3><p>Documentation, digital office tools and basic management.</p></div>
+</div></div></section>
+
+<section id="projects"><div class="container"><div class="head"><div class="label">Selected Projects</div><h2>Some things I've worked on.</h2><p>Practical projects reflecting my interest in AI, web development and digital business.</p></div><div class="projects">
+<article class="project"><div class="project-top"><span class="num">01</span><b>AI</b></div><h3>AI Chatbot</h3><p>A Flask-based AI chatbot with Gemini integration and chat history functionality.</p><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Gemini</span></div></article>
+<article class="project"><div class="project-top"><span class="num">02</span><b>Cybersecurity</b></div><h3>SOC Cybersecurity AI Agent</h3><p>An AI-focused cybersecurity agent concept designed to assist with security analysis and guidance.</p><div class="tags"><span class="tag">AI Agent</span><span class="tag">Cybersecurity</span></div></article>
+<article class="project"><div class="project-top"><span class="num">03</span><b>Web</b></div><h3>WordPress Website</h3><p>A professional website created using WordPress with AI-assisted development.</p><div class="tags"><span class="tag">WordPress</span><span class="tag">Web Design</span></div></article>
+<article class="project"><div class="project-top"><span class="num">04</span><b>E-Commerce</b></div><h3>Shopify Store Design</h3><p>An e-commerce store design project focused on product presentation and user experience.</p><div class="tags"><span class="tag">Shopify</span><span class="tag">E-Commerce</span></div></article>
+<article class="project"><div class="project-top"><span class="num">05</span><b>Design</b></div><h3>Social Media Post Design</h3><p>Creative promotional post designs using Canva and graphic design techniques.</p><div class="tags"><span class="tag">Canva</span><span class="tag">Graphic Design</span></div></article>
+<article class="project"><div class="project-top"><span class="num">06</span><b>Creative</b></div><h3>Poster & Graphic Design</h3><p>Clean layouts for posters, promotional graphics and digital content.</p><div class="tags"><span class="tag">Canva</span><span class="tag">Posters</span></div></article>
+</div></div></section>
+
+<section class="dark" id="services"><div class="container"><div class="head"><div class="label">What I Can Do</div><h2>Digital services & creative work.</h2><p>Areas where I can apply my current skills to practical projects.</p></div><div class="services">
+<div class="service"><div>✦</div><h3>AI Solutions</h3><p>AI chatbot and AI agent concepts for useful digital workflows.</p></div>
+<div class="service"><div>◈</div><h3>Website Design</h3><p>WordPress websites and clean responsive web layouts.</p></div>
+<div class="service"><div>▣</div><h3>Graphic Design</h3><p>Canva graphics, posters, social media posts and promotional designs.</p></div>
+<div class="service"><div>◆</div><h3>E-Commerce</h3><p>Shopify store design and online product presentation.</p></div>
+<div class="service"><div>◎</div><h3>Social Media Content</h3><p>Professional social media post and promotional content.</p></div>
+<div class="service"><div>✓</div><h3>Digital Support</h3><p>Office management and basic digital workflow support.</p></div>
+</div></div></section>
+
+<section id="education"><div class="container"><div class="head"><div class="label">Education</div><h2>My learning journey.</h2></div><div class="education">
+<div class="edu"><div><h3>FCS — Computer Science</h3><p>Mashal Degree College, Wah Cantt</p></div><div class="year">Completed</div></div>
+<div class="edu"><div><h3>BSCS</h3><p>Planning to continue higher education in Computer Science.</p></div><div class="year">Next Goal</div></div>
+<div class="edu"><div><h3>Artificial Intelligence Course</h3><p>3-month practical course</p></div><div class="year">Course</div></div>
+<div class="edu"><div><h3>Web Development Course</h3><p>3-month practical course</p></div><div class="year">Course</div></div>
+<div class="edu"><div><h3>CIT Office Management</h3><p>6-month practical course</p></div><div class="year">Course</div></div>
+</div></div></section>
+
+<section id="contact"><div class="container"><div class="contact-card"><div><div class="label" style="color:#d8d5ff">Contact</div><h2>Let's create something useful together.</h2><p>For projects, collaboration, learning opportunities or digital design work, feel free to get in touch.</p></div><div class="details">
+<div class="item"><small>Phone</small><strong>0310 1538529</strong></div>
+<div class="item"><small>Email</small><strong>fa7345845@gmail.com</strong></div>
+<div class="item"><small>Address</small><strong>Taxila Cantt</strong></div>
+<div class="item"><small>Instagram</small><strong>Fatima Bibi</strong></div>
+</div></div></div></section>
+<footer>© 2026 Fatima Bibi — Digital Skills Portfolio</footer>
+</body>
+</html>
